@@ -1,5 +1,5 @@
 {% set name = "pysages" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/SSAGESLabs/PySAGES/archive/v{{ version }}.tar.gz
-  sha256: 137bcfaaf93395c71d01ac60f64f57d1111c53f701279d57fc8fdc6c36d293a1
+  sha256: d1c6fe841abee5c618e6046746011628d9986748cad822faa1479796f7da8923
 
 build:
   noarch: python
