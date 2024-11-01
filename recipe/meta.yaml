@@ -26,6 +26,7 @@ requirements:
   run:
     - python >=3.6
     - cython
+    - dill
     - jax
     - numba
     - plum-dispatch
