@@ -12,11 +12,11 @@ source:
 build:
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools >=41.0
     - wheel >=0.33
     - numpy >=1.16
@@ -24,7 +24,7 @@ requirements:
     - setuptools-scm >=6.0
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - cython
     - dill
     - jax
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/SSAGESLabs/PySAGES
